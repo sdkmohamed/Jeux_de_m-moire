@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu de Mémoire</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Jeu de Mémoire</h1>
+        <img src="images/jeu-paires.jpg" alt="Logo du jeu" class="logo">
+        
+        <div class="controls">
+            <button id="start-btn">Commencer le jeu</button>
+            <button id="reset-btn">Réinitialiser le jeu</button>
+            <select id="difficulty">
+                <option value="" disabled selected>Choisir le niveau de difficulté</option>
+                <option value="easy">Facile</option>
+                <option value="medium">Intermédiaire</option>
+                <option value="hard">Difficile</option>
+            </select>
+        </div>
+        
+        <div class="score">
+            <p id="score">Tentatives : 0</p>
+            <p id="timer">Temps : 20s</p>
+        </div>
+        
+        <div class="game-board"></div>
+    </div>
+
+    <!-- Fenêtre modale -->
+    <div id="game-message" class="modal hidden">
+        <div class="modal-content">
+            <p id="message-text"></p>
+            <button id="close-btn">OK</button>
+        </div>
+    </div>      
+
+    <!-- Lien vers les fichiers JavaScript MVC -->
+    <script src="js/model.js"></script>
+    <script src="js/view.js"></script>
+    <script src="js/controller.js"></script>
+</body>
+</html>
